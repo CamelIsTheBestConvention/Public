@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.springdream.app.mapper.RankingMapper">
+
+    <!--  포인트 랭킹  -->
+    <select id="selectAllOrderByTotalPoint" resultType="rankingDTO">
+        SELECT TOTAL_POINT, MEMBER_NICKNAME
+        FROM
+        (
+            SELECT ROWNUM R, TOTAL_POINT, MEMBER_NICKNAME
+            FROM
+            (
+                SELECT P.TOTAL_POINT, M.MEMBER_NICKNAME
+                FROM TBL_POINT P
+                    INNER JOIN TBL_MEMBER M
+                    ON P.MEMBER_NUMBER = M.MEMBER_NUMBER
+            ORDER BY TOTAL_POINT DESC
+            )
+            <![CDATA[
+            WHERE ROWNUM<=5
+        )
+
+
+
+        ]]>
+    </select>
+
+    <!--  채택 수 랭킹-->
+    <select id="selectAllOderByAdoptCount" resultType="rankingDTO">
+        SELECT M.MEMBER_NICKNAME, COUNT(*) AS ADOPTS
+        FROM TBL_MEMBER M
+            FULL OUTER JOIN TBL_REPLY R
+            ON M.MEMBER_NUMBER = R.MEMBER_NUMBER
+        WHERE R.REPLY_ADOPT=1
+        GROUP BY M.MEMBER_NICKNAME
+        ORDER BY ADOPTS DESC
+    </select>
+
+    <!--  답글 수 랭킹  -->
+    <select id="countReplies" resultType="rankingDTO">
+        SELECT M.MEMBER_NICKNAME, COUNT(*) AS REPLIES
+        FROM TBL_MEMBER M
+            JOIN TBL_REPLY R
+            ON M.MEMBER_NUMBER = R.MEMBER_NUMBER
+        GROUP BY M.MEMBER_NICKNAME
+        ORDER BY REPLIES DESC
+    </select>
+
+    <select id="selectAllOrderByViewcount" resultType="rankingDTO">
+        SELECT B.BOARD_NUMBER, B.BOARD_VIEWCOUNT, M.MEMBER_NICKNAME, B.BOARD_TITLE
+        FROM TBL_BOARD B
+            JOIN TBL_MEMBER M
+            ON B.MEMBER_NUMBER = M.MEMBER_NUMBER
+        ORDER BY B.BOARD_VIEWCOUNT DESC
+    </select>
+</mapper>

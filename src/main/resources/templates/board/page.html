@@ -20,12 +20,14 @@
     <div class="container">
         <nav class="sub-nav">
             <ol class="breadcrumbs">
-                <li title="국어 게시판">
-                    <a th:href="@{/board/page(boardNumber=*{boardNumber})}" th:text="${board.boardCategory} + ' 게시판'"></a>
-                </li>
-                <li title="국어게시판 내용">
-                    <a href="">글 상세 페이지</a>
-                </li>
+                <th:block >
+                    <li th:title="${board.boardCategory} + '게시판'">
+                        <a th:href="@{/board/subject?category=} + ${board.boardCategory}" th:text="${board.boardCategory} + ' 게시판'"></a>
+                    </li>
+                    <li th:title="${board.boardCategory} + ' 게시판 내용'">
+                        <a href="">글 상세 페이지</a>
+                    </li>
+                </th:block>
             </ol>
         </nav>
         <div class="article-container">
@@ -38,7 +40,8 @@
                         <th:block th:each="list:${boardlist}">
                             <div th:object="${list}">
                                 <li>
-                                    <a th:href="@{/board/page(boardNumber=*{boardNumber})}" class="sidebar-item current-article">
+                                    <a th:href="@{/board/page(boardNumber=*{boardNumber})}"
+                                       class="sidebar-item current-article">
                                         <p class="sidebar-item-text" th:text="*{boardTitle}"></p>
                                     </a>
                                 </li>
@@ -78,6 +81,7 @@
                         </div>
                     </div>
                 </article>
+
                 <!-- 답글 입력창 -->
                 <div class="comment-field">
                     <div class="comment-write">
@@ -85,6 +89,7 @@
                     </div>
                     <button type="button" class="comment-write-button">작성</button>
                 </div>
+
                 <!-- 답글 리스트 -->
                 <th:block th:each="reply:${boardlist}">
                     <article class="article" th:object="${reply}">

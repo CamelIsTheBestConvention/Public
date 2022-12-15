@@ -2,12 +2,12 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.springdream.app.mapper.PointMapper">
 
-<!--    &lt;!&ndash;  회원가입  &ndash;&gt;-->
-<!--    <insert id="insert" parameterType="Long">-->
-<!--&#45;&#45;         SELECT M.MEMBER_NUMBER-->
-<!--    INSERT INTO TBL_POINT (MEMBER_NUMBER)-->
-<!--    VALUES (#{memberNumber})-->
-<!--    </insert>-->
+    <!--    &lt;!&ndash;  회원가입  &ndash;&gt;-->
+    <!--    <insert id="insert" parameterType="Long">-->
+    <!--&#45;&#45;         SELECT M.MEMBER_NUMBER-->
+    <!--    INSERT INTO TBL_POINT (MEMBER_NUMBER)-->
+    <!--    VALUES (#{memberNumber})-->
+    <!--    </insert>-->
 
 
     <!-- 개인 포인트 조회 -->
@@ -17,36 +17,16 @@
         WHERE MEMBER_NUMBER = #{memberNumber}
     </select>
 
-    <!--  랭킹 목록  -->
-    <select id="selectAllOrderByTotalPoint" resultType="pointDTO">
-        SELECT TOTAL_POINT, MEMBER_NUMBER, MEMBER_NICKNAME
-        FROM
-        (
-            SELECT ROWNUM R, TOTAL_POINT, MEMBER_NUMBER, MEMBER_NICKNAME
-            FROM
-            (
-                SELECT P.TOTAL_POINT, P.MEMBER_NUMBER, M.MEMBER_NICKNAME
-                FROM TBL_POINT P
-                    INNER JOIN TBL_MEMBER M
-                    ON P.MEMBER_NUMBER = M.MEMBER_NUMBER
-            ORDER BY TOTAL_POINT DESC
-            )
-            <![CDATA[
-            WHERE ROWNUM<=5
-        )
-        ]]>
+    <select id="countReplies">
+    SELECT M.MEMBER_NICKNAME, COUNT(*) AS REPLIES
+    FROM TBL_MEMBER M
+        JOIN TBL_REPLY R
+        ON M.MEMBER_NUMBER = R.MEMBER_NUMBER
+    GROUP BY M.MEMBER_NICKNAME
+    ORDER BY REPLIES DESC
     </select>
 
-    <!--    채택 수-->
-    <select id="selectAllOderByAdoptCount" resultType="pointDTO">
-        SELECT M.MEMBER_NUMBER, M.MEMBER_NICKNAME, COUNT(M.MEMBER_NUMBER)
-        FROM TBL_MEMBER M
-            INNER JOIN TBL_REPLY R
-            ON M.MEMBER_NUMBER, R.MEMBER_NUMBER
-        WHERE R.REPLY_ADOPT = 1
-    </select>
-
-<!--  포인트 넣기  -->
+    <!--  포인트 넣기  -->
     <insert id="insert" parameterType="pointVO">
         INSERT INTO TBL_POINT (CURRENT_POINT, TOTAL_POINT, MEMBER_NUMBER) VALUES (#{currentPoint}, #{totalPoint}, #{memberNumber})
     </insert>

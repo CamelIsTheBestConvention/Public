@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
 @NoArgsConstructor
 public class PointVO {
 
-    private long pointIndex;
     private long currentPoint;
     private long totalPoint;
     private long memberNumber;

@@ -1,204 +1,123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>포인트 충전</title>
-    <link rel="stylesheet" type="text/css" href="header.css">
-    <link rel="stylesheet" type="text/css" href="footer.css">
-    <link rel="stylesheet" type="text/css" href="point.css">
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/fix/header.css}'>
+    <link rel='stylesheet' type='text/css' media='screen' th:href='@{/css/fix/footer.css}'>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/point/point.css}">
 </head>
 <body>
     <!-- 헤더 추가 필요 -->
-    <div class="css-header header">
-        <div class="css-header-main">
-            <!-- 로고 -->
-            <a href="" class="css-logo">
-                <div class="css-logo-img">
-                    <img src="../main/img/header_logo.png" alt="">
-                </div>
-            </a>
-            <div style="flex-grow: 1;"></div>
-            <!-- 검색바 -->
-            <form action="" class="css-search">
-                <div class="css-input-wrapper" id="inputWrapper">
-                    <input class="css-input" id="input"
-                    placeholder="서비스, 전문가를 검색해 보세요" maxlength="15"
-                    autocomplete="off" autocorrect="off" 
-                    autocapitalize="off" type="text">
-                    <div class="suffix-wrapper">
-                        <span role="img" rotate="0" class="css-aah4od e181xm9y1">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
-                                <path xmlns="http://www.w3.org/2000/svg" 
-                                d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z">
-                                </path>
-                            </svg>
-                        </span>
-                    </div>
-                </div>
-            </form>
-            <!-- 버튼 -->
-            <div class="css-buttons">
-                <button class="css-button" id="button-top">
-                    <span>결제하기</span>
-                </button>
-                <button class="css-button" id="button-top">
-                    <span>로그인</span>
-                </button>
-                <button class="css-button" id="button-join">
-                    <span>무료 회원가입</span>
-                </button>
-            </div>
-        </div>
-        <!-- 카테고리 -->
-        <div class="css-category category">
-            <div class="css-category-main">
-                <div class="css-categoryAll-wrapper">
-                    <button class="css-category-button">
-                        <span role="img" rotate="0">
-                            <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
-                                <path xmlns="http://www.w3.org/2000/svg" d="M19,17 C19.5522847,17 20,17.4477153 20,18 C20,18.5522847 19.5522847,19 19,19 L5,19 C4.44771525,19 4,18.5522847 4,18 C4,17.4477153 4.44771525,17 5,17 L19,17 Z M19,11 C19.5522847,11 20,11.4477153 20,12 C20,12.5522847 19.5522847,13 19,13 L5,13 C4.44771525,13 4,12.5522847 4,12 C4,11.4477153 4.44771525,11 5,11 L19,11 Z M19,5 C19.5522847,5 20,5.44771525 20,6 C20,6.55228475 19.5522847,7 19,7 L5,7 C4.44771525,7 4,6.55228475 4,6 C4,5.44771525 4.44771525,5 5,5 L19,5 Z"></path>
-                            </svg>
-                        </span>
-                        <span style="margin: 0 0 5px 8px;">전체 카테고리</span>
-                        <span role="img" rotate="0" style="margin-top: 5px;">
-                            <svg width="25" height="25" viewBox="0 0 28 28" fill="currentColor" aria-hidden="true" focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
-                                <polygon id="Triangle" transform="translate(12.000000, 12.000000) rotate(-180.000000) translate(-12.000000, -12.000000) " points="12 9 18 15 6 15"></polygon>
-                            </svg>
-                        </span>
-                        <!-- 드롭다운 메뉴 -->
-                        <!-- <div class="css-dropdown">
-                            <ul>
-                                <li><a href="">국어</a></li>
-                                <li><a href="">영어</a></li>
-                                <li><a href="">수학</a></li>
-                                <li><a href="">과탐</a></li>
-                                <li><a href="">사탐</a></li>
-                                <li><a href="">한국사</a></li>
-                                <li><a href="">제2외국어</a></li>
-                            </ul>
-                        </div> -->
-                    </button>
-                </div>
-                <div class="button">
-                    <button class="css-menu-button">
-                        <span>유저 랭킹</span>
-                    </button>
-                </div>
-                <div class="button">
-                    <button class="css-menu-button">
-                        <span>인기글</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div th:insert="/fix/header :: header" class="header"></div>
     <!-- 포인트 충전 페이지 -->
     <div class="point-charge">
-        <div class="flex margin-top-60">
+        <form class="flex margin-top-60">
             <div class="content-wrapper">
                 <section class="point-charge-select-card">
                     <div class="point-charge-select-card-main-title">포인트 충전</div>
                     <div class="select-card-options-box">
-                        <div class="point-price-select-box">
-                            <!-- 충전 img -->
-                            <img src="./img/charge-icon.png" class="charge-icon" style="width: 150px; height:160px">
-                            <div class="options-main">
-                                <p class="select-card-options-label">충전 포인트</p>
-                                <div class="description-box">
-                                    <p class="select-card-options-description">충전 금액을 선택하세요</p>
-                                </div>
-                                <div class="charge-option-button-list">
-                                    <div class="charge-option-button">
-                                        <label for="" class="charge-option-button-inner">
-                                            <input type="radio" name="charge-amount" class="hide" value="1000">
-                                            <span class="radio-body hide"></span>
-                                            <div class="radio-text">
-                                                <span>+1000원</span>
-                                            </div>
-                                        </label>
+                        <form action="" method="post">
+                            <div class="point-price-select-box">
+                                <!-- 충전 img -->
+                                <img th:src="@{/img/point/charge-icon.png}" class="charge-icon" style="width: 150px; height:160px">
+                                <div class="options-main">
+                                    <p class="select-card-options-label">충전 포인트</p>
+                                    <div class="description-box">
+                                        <p class="select-card-options-description">충전 금액을 선택하세요</p>
                                     </div>
-                                    <div class="charge-option-button">
-                                        <label for="" class="charge-option-button-inner">
-                                            <input type="radio" name="charge-amount" class="hide" value="2000">
-                                            <span class="radio-body hide"></span>
-                                            <div class="radio-text">
-                                                <span>+2000원</span>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="charge-option-button">
-                                        <label for="" class="charge-option-button-inner">
-                                            <input type="radio" name="charge-amount" class="hide" value="5000">
-                                            <span class="radio-body hide"></span>
-                                            <div class="radio-text">
-                                                <span>+5000원</span>
-                                            </div>
-                                        </label>
-                                    </div>
-                                    <div class="charge-option-button">
-                                        <label for="" class="charge-option-button-inner">
-                                            <input type="radio" name="charge-amount" class="hide" value="10000">
-                                            <span class="radio-body hide"></span>
-                                            <div class="radio-text">
-                                                <span>+10000원</span>
-                                            </div>
-                                        </label>
+
+                                    <div class="charge-option-button-list">
+                                        <div class="charge-option-button">
+                                            <label for="" class="charge-option-button-inner">
+                                                <input type="radio" name="charge-amount" class="hide money" value="1000">
+                                                <span class="radio-body hide"></span>
+                                                <div class="radio-text">
+                                                    <span>+1000원</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="charge-option-button">
+                                            <label for="" class="charge-option-button-inner">
+                                                <input type="radio" name="charge-amount" class="hide money" value="2000">
+                                                <span class="radio-body hide"></span>
+                                                <div class="radio-text">
+                                                    <span>+2000원</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="charge-option-button">
+                                            <label for="" class="charge-option-button-inner">
+                                                <input type="radio" name="charge-amount" class="hide money" value="5000">
+                                                <span class="radio-body hide"></span>
+                                                <div class="radio-text">
+                                                    <span>+5000원</span>
+                                                </div>
+                                            </label>
+                                        </div>
+                                        <div class="charge-option-button">
+                                            <label for="" class="charge-option-button-inner">
+                                                <input type="radio" name="charge-amount" class="hide money" value="10000">
+                                                <span class="radio-body hide"></span>
+                                                <div class="radio-text">
+                                                    <span>+10000원</span>
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="payment-options-select-box">
-                            <div class="options-main">
-                                <p class="select-card-options-label margin-bottom-10">결제 수단</p>
-                                <ul class="payment-radio-button">
-                                    <li>
-                                        <div class="radio">
-                                            <label class="radio-label">
-                                                <input type="radio" name="payment-option" value="신용카드">
-                                                <span class="radio-body"></span>
-                                                <div class="radio-text">
-                                                    <span class="select-card-options-label">신용카드</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="radio">
-                                            <label class="radio-label">
-                                                <input type="radio" name="payment-option" value="실시간 계좌이체">
-                                                <span class="radio-body"></span>
-                                                <div class="radio-text">
-                                                    <span class="select-card-options-label">실시간 계좌이체</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="radio">
-                                            <label class="radio-label">
-                                                <input type="radio" name="payment-option" value="무통장입금">
-                                                <span class="radio-body"></span>
-                                                <div class="radio-text">
-                                                    <span class="select-card-options-label">무통장입금</span>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </li>
-                                </ul>
+                        </form>
+<!--                        <div class="payment-options-select-box">-->
+<!--                            <div class="options-main">-->
+<!--                                <p class="select-card-options-label margin-bottom-10">결제 수단</p>-->
+<!--                                <ul class="payment-radio-button">-->
+<!--                                    <li>-->
+<!--                                        <div class="radio">-->
+<!--                                            <label class="radio-label">-->
+<!--                                                <input type="radio" name="payment-option" value="신용카드">-->
+<!--                                                <span class="radio-body"></span>-->
+<!--                                                <div class="radio-text">-->
+<!--                                                    <span class="select-card-options-label">신용카드</span>-->
+<!--                                                </div>-->
+<!--                                            </label>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <div class="radio">-->
+<!--                                            <label class="radio-label">-->
+<!--                                                <input type="radio" name="payment-option" value="실시간 계좌이체">-->
+<!--                                                <span class="radio-body"></span>-->
+<!--                                                <div class="radio-text">-->
+<!--                                                    <span class="select-card-options-label">실시간 계좌이체</span>-->
+<!--                                                </div>-->
+<!--                                            </label>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                    <li>-->
+<!--                                        <div class="radio">-->
+<!--                                            <label class="radio-label">-->
+<!--                                                <input type="radio" name="payment-option" value="무통장입금">-->
+<!--                                                <span class="radio-body"></span>-->
+<!--                                                <div class="radio-text">-->
+<!--                                                    <span class="select-card-options-label">무통장입금</span>-->
+<!--                                                </div>-->
+<!--                                            </label>-->
+<!--                                        </div>-->
+<!--                                    </li>-->
+<!--                                </ul>-->
                                 <div class="charge-button-container">
                                     <div class="charge-button">
-                                        <button disabled="disabled" class="btn btn-yellow">
-                                            <span style="font-size: 15px;">충전하기</span>
+                                        <button type="button" disabled="disabled" class="btn btn-yellow" onclick="requestPay('${c.ctitle}')">
+                                            <span style="font-size: 15px;">포인트 충전하기</span>
                                         </button>
                                         <!-- <button class="btn btn-yellow">
                                             <span style="font-size: 15px;">충전하기</span>
                                         </button> -->
                                     </div>
                                 </div>
-                                <!-- payinfo form으로 전송 -->
-                                <form id="#" method="post"></form>
                             </div>
                         </div>
                     </div>
@@ -206,13 +125,11 @@
                 <section class="point-charge-description-box">
                     <h4 class="description-title">
                         <!-- 체크 이미지 추가 -->
-                        <img src="./img/checked-black.svg" alt="check-mark" style="margin-right: 5px;">
+                        <img th:src="@{/img/point/checked-black.svg}" alt="check-mark" style="margin-right: 5px;">
                         <span>이용 상세 안내</span>
                     </h4>
                     <ul class="description-list">
-                        <li>충전은 필요한 만큼만!!</li>
-                        <li>충전은 필요한 만큼만!!</li>
-                        <li>충전은 필요한 만큼만!!</li>
+                        <li>충전 비율은 1000원 : 1000p 입니다!</li>
                         <li>충전은 필요한 만큼만!!</li>
                     </ul>
                 </section>
@@ -221,30 +138,79 @@
     </div>
 
     <!-- 푸터 추가 필요 -->
-    <div class="css-footer">
-        <div class="css-footer-info">
-            <p class="css-info-text">
-                웹개발 5조
-                <span class="css-info-bar"> | </span>
-                서울특별시 강남구 역삼동 736-7
-                <span class="css-info-bar"> | </span>
-                팀장 : 강민구
-                <span class="css-info-bar"> | </span>
-                사업자등록번호 : 613-81-65278
-                <span class="css-info-bar"> | </span><br>
-                통신판매업신고 : 2018-서울서초-2134
-                <span class="css-info-bar"> | </span>
-                유료직업소개사업등록번호 : 제2021-3210195-14-5-00035호
-                <span class="css-info-bar"> | </span>
-                고객센터 : 1544-6254
-                <span class="css-info-bar"> | </span>
-                kmg2331@gmail.com
-            </p>
-        </div>
-    </div>
-
+    <footer th:replace="/fix/footer.html::.footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script src="header.js"></script>
-<script src="point.js"></script>
+<script type="text/javascript" th:src="@{/js/fix/header.js}"></script>
+<script type="text/javascript" th:src="@{/js/point/point.js}"></script>
+<!-- iamport.payment.js == 아임포트 결제모듈 연동 역할 -->
+<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
+<script>
+    var IMP = window.IMP;  // 팝업창
+    /* IMP.init("imp67011510"); */
+    IMP.init("imp25368861");// 아임포트 가맹점 식별코드
+
+    var today = new Date(); //일
+    var hours = today.getHours(); // 시
+    var minutes = today.getMinutes();  // 분
+    var seconds = today.getSeconds();  // 초
+    var milliseconds = today.getMilliseconds(); //밀리초
+    var buyPoint = hours +  minutes + seconds + milliseconds;
+    // 충전 값
+    var $money = $("input:radio[name='charge-amount']").val();
+    // 구매자 이름
+    // var memberName = $('');
+    // 구매자 폰번호
+    // var memberMobile = $('');
+
+    function requestPay(itemName) { //인자 값으로 컨트롤러로부터 받아온 차량명 데이터를 삽입하였다.
+        console.log(itemName);
+        IMP.request_pay({ //요청하는 것들
+            pg : 'kakaopay', //카카오페이 API래핑
+            /*                 'kakao':카카오페이,
+        html5_inicis':이니시스(웹표준결제)
+        'nice':나이스페이
+        'jtnet':제이티넷
+        'uplus':LG유플러스
+        'danal':다날
+        'payco':페이코
+        'syrup':시럽페이
+        'paypal':페이팔
+         */
+            /* pay_method : 'card', */
+            /*
+            'samsung':삼성페이,
+            'card':신용카드,
+            'trans':실시간계좌이체,
+            'vbank':가상계좌,
+            'phone':휴대폰소액결제
+             */
+            merchant_uid: "IMP"+buyPoint,  // 상점에서관리하는 상품번호
+            name : '강민구', //상품명
+            amount : 5000, //가격
+            // buyer_email : 'Iamport@chai.finance', //구매자 이메일
+            buyer_name : '강민구', //구매자 이름
+            buyer_tel : '010-1234-5678', //구매자 번호
+            buyer_addr : '서울특별시 강남구 역삼동 코리아It아카데미', //구매자 주소
+            buyer_postcode : '06236',
+            // m_redirect_url : 'https://www.yourdomain.com/payments/complete',
+        }, function (rsp) { // callback
+            if (rsp.success) {
+                console.log(rsp);
+                var msg = '결제가 완료되었습니다.\n';
+                msg += '고유ID : ' + rsp.imp_uid+"\n";
+                msg += '거래 페이지 : springDream' +"\n";
+                msg += '결제 금액 : ' + 5000 +'원\n';
+                msg += '카드 승인번호 : ' + 394411222468;
+
+                alert(5000 + "포인트가 충전되었습니다.");
+            } else {
+                console.log(rsp);
+                var msg = '결제에 실패하였습니다.\n';
+                msg += '에러내용 : ' + rsp.error_msg;
+            }
+            alert(msg);
+        });
+    }
+</script>
 </html>

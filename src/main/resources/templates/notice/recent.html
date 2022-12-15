@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 상세보기</title>
+    <link rel="stylesheet" type='text/css' th:href="@{/css/fix/header.css}">
+    <link rel="stylesheet" type='text/css' th:href="@{/css/fix/footer.css}">
+    <link rel="stylesheet" type='text/css' th:href="@{/css/notice/notice.css}">
+</head>
+
+<body>
+<!-- 헤더 -->
+<div th:insert="~{/fix/header :: header}"></div>
+
+<!-- 헤더와 바디 사이 공간 -->
+<div class="container-divider"></div>
+
+<!-- 새소식 게시판 -->
+<div class="container">
+    <nav class="sub-nav">
+        <ol class="breadcrumbs">
+            <li title="공지사항">
+                <a href="">공지사항</a>
+            </li>
+            <li title="전체 공지">
+                <a th:href="@{/notice/main}">전체 공지</a>
+            </li>
+            <li>공지 상세</li>
+        </ol>
+    </nav>
+    <div class="article-container">
+        <!-- 왼쪽의 글 목록 -->
+        <section class="article-sidebar">
+            <section class="section-articles collapsible-sidebar">
+                <h3 class="collapsible-sidebar-title sidenav-title">최근 소식</h3>
+                <!-- 최신 10개 띄우기 -->
+                <ul>
+                    <th:block th:each="notice, i: ${notices}">
+                        <li th:if="${i.count <= 10}">
+                            <a th:href="@{/notice/recent(noticeNumber=${notice.noticeNumber})}" class="sidenav-item current-article">
+                                <p class="sidenav-item-text" th:text="${notice.noticeTitle}"></p>
+                            </a>
+                        </li>
+                    </th:block>
+                </ul>
+<!--                <a href="" class="article-sidebar-item">더보기</a>-->
+            </section>
+        </section>
+
+        <!-- 글 -->
+        <article class="article">
+
+            <!-- 글 제목 -->
+            <header class="article-header">
+                <h1 class="article-title" th:text="${notice.noticeNumber} + '◾' + ${notice.noticeTitle}"></h1>
+            </header>
+
+            <!-- 글 내용 -->
+            <section class="article-info">
+                <div class="article-content">
+                    <div class="article-body">
+                        <p>&nbsp;</p>
+                        <p class="wysiwyg-text-align-center" th:text="'◾ ' + ${notice.noticeContent}">
+                        </p>
+                        <p class="wysiwyg-text-align-center">
+                            &nbsp;
+                        </p>
+                        <h3>
+                                <span class="wysiwyg-color-oragne80">
+                                    <strong>❚ </strong>
+                                </span>
+                                <span class="wysiwyg-color-balck">
+                                    <strong>공지 일자</strong>
+                                </span>
+                        </h3>
+                        <p class="wysiwyg-text-align-left">
+                            <strong>
+                                <span class="wysiwyg-font-size-large" th:text="'　◾ ' + ${notice.noticeDate}"></span>
+                            </strong>
+                        </p>
+                        <p class="wysiwyg-text-align-left">&nbsp;</p>
+
+                    </div>
+
+                </div>
+            </section>
+            <!-- 문의하기 버튼?? -->
+            <footer>
+                <div class="article-footer"></div>
+                <div class="article-return-to-top">
+                    <a href="#article-container">
+                        맨 위로 돌아가기
+                        <span class="icon-arrow-up"></span>
+                    </a>
+                </div>
+            </footer>
+        </article>
+    </div>
+</div>
+
+<!-- 푸터 추가 필요 -->
+<div class="css-footer">
+    <div class="css-footer-info">
+        <p class="css-info-text">
+            웹개발 5조
+            <span class="css-info-bar"> | </span>
+            서울특별시 강남구 역삼동 736-7
+            <span class="css-info-bar"> | </span>
+            팀장 : 강민구
+            <span class="css-info-bar"> | </span>
+            사업자등록번호 : 613-81-65278
+            <span class="css-info-bar"> | </span><br>
+            통신판매업신고 : 2018-서울서초-2134
+            <span class="css-info-bar"> | </span>
+            유료직업소개사업등록번호 : 제2021-3210195-14-5-00035호
+            <span class="css-info-bar"> | </span>
+            고객센터 : 1544-6254
+            <span class="css-info-bar"> | </span>
+            kmg2331@gmail.com
+        </p>
+    </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+<script src="header.js"></script>
+<script src="notice.js"></script>
+</html>

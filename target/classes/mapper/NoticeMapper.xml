@@ -1,20 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper  namespace="com.springdream.app.mapper.NoticeMapper">
+<mapper namespace="com.springdream.app.mapper.NoticeMapper">
 
+<!--  공지사항 추가  -->
+    <insert id="insert" parameterType="noticeVO">
+        <selectKey keyProperty="noticeNumber" order="BEFORE" resultType="long">
+            SELECT SEQ_NOTICE.NEXTVAL FROM DUAL
+        </selectKey>
+        INSERT INTO TBL_NOTICE(NOTICE_NUMBER, NOTICE_DATE, NOTICE_TITLE, NOTICE_CONTENT)
+        VALUES (#{noticeNumber}, SYSDATE, #{noticeTitle}, #{noticeContent})
+    </insert>
+
+<!--  공지사항 수정  -->
+    <update id="update" parameterType="noticeDTO">
+        UPDATE TBL_NOTICE
+        SET NOTICE_TITLE = #{noticeTitle}, NOTICE_CONTENT = #{noticeContent}
+        WHERE NOTICE_NUMBER = #{noticeNumber}
+    </update>
+
+<!--  공지사항 삭제  -->
+    <delete id="delete">
+        DELETE FROM TBL_NOTICE
+        WHERE NOTICE_NUMBER = #{noticeNumber}
+    </delete>
+
+<!--  조회  -->
     <select id="select" resultType="noticeDTO">
         SELECT N.NOTICE_NUMBER, N.NOTICE_TITLE, N.NOTICE_CONTENT, N.NOTICE_DATE
         FROM TBL_NOTICE N
         WHERE N.NOTICE_NUMBER = #{noticeNumber}
     </select>
 
-    <select id="selectAllOderByDate" resultType="noticeDTO">
-        SELECT N.NOTICE_NUMBER, N.NOTICE_TITLE, N.NOTICE_CONTENT, N.NOTICE_DATE
-        FROM TBL_NOTICE N
-        ORDER BY N.NOTICE_DATE
+<!--  전체 조회  -->
+    <select id="selectAll" resultType="noticeDTO">
+        SELECT NOTICE_NUMBER, NOTICE_TITLE, NOTICE_DATE, NOTICE_CONTENT
+        FROM TBL_NOTICE
+        ORDER BY NOTICE_NUMBER DESC
     </select>
-
-
-
 
 </mapper>

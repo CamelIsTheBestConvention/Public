@@ -24,23 +24,14 @@ public class NoticeDAO {
     public void remove(Long noticeNumber){
         noticeMapper.delete(noticeNumber);
     }
-    //    조회
-    public NoticeDTO findByNotice(Long noticeNumber){
+
+    //  조회
+    public NoticeDTO findByNoticeNumber(Long noticeNumber) {
         return noticeMapper.select(noticeNumber);
     }
 
-    //    전체 조회
-    public List<NoticeDTO> findAll(){
-        return noticeMapper.selectAll();
-    }
-
-    //    최신글 조회
-    public List<NoticeDTO> findAllOrderByDate(){
-        return noticeMapper.selectAllOderByDate();
-    }
+    //  전체 조회
+    public List<NoticeDTO> findAll(){ return noticeMapper.selectAll(); }
 
 
-    public List<NoticeDTO> findAllOderByDate(){ return noticeMapper.selectAllOderByDate();}
-
-    public NoticeDTO findByNoticeNumber(Long noticeNumber) { return noticeMapper.select(noticeNumber);}
 }

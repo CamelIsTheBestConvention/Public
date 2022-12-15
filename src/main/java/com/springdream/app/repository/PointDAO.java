@@ -28,19 +28,12 @@ public class PointDAO {
         return pointMapper.totalPoint(memberNumber);
     }
 
-    //  누적 포인트 기준 랭킹 리스트
-    public List<PointDTO> findAllOrderByTotalPoint(){
-        return pointMapper.selectAllOrderByTotalPoint();
-    }
 
-    //  채택 수 기준 랭킹 리스트
-    public List<PointDTO> findAllOrderByAdoptCount() { return pointMapper.selectAllOderByAdoptCount(); }
 
     //  포인트VO insert
     public void insertPoint(PointVO pointVO){
         pointMapper.insert(pointVO);
     }
-
 
 
     //    채택 포인트 전송 (1 to 2)

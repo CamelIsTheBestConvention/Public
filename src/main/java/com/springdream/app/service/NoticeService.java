@@ -12,10 +12,11 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor @Qualifier("notice") @Primary
 public class NoticeService{
-    private NoticeDAO noticeDAO;
+
+    private final NoticeDAO noticeDAO;
 
     //  공지사항 메인 - 최신순 공지사항 조회
-    public List<NoticeDTO> showAll(){ return noticeDAO.findAllOderByDate();}
+    public List<NoticeDTO> showAll(){ return noticeDAO.findAll();}
 
     //  공지사항 상세 페이지
     public NoticeDTO show(Long noticeNumber){ return noticeDAO.findByNoticeNumber(noticeNumber);}

@@ -9,330 +9,270 @@
     <link rel="stylesheet" th:href="@{/webfonts/metro-sans-medium.otf}">
 </head>
 <body>
-    <!-- 헤더 -->
-    <main>
-        <div th:insert="/fix/header :: header" class="header"></div>
-        <div class="css-section1">
-            <!-- 메인 배너 -->
-            <div class="css-banner">
-                <div class="css-banner-section1">
-                    <h1 class="css-banner-title">모르는 문제를 <br>친구들에게 물어보세요!</h1>
-                    <!-- 배너 검색창 -->
-                    <form action="" style="display: inline-flex; position: relative; width: 504px; height: 64px;">
-                        <div class="input-wrapper">
-                            <div class="css-input-category">
-                                <span class="category-text" style="white-space: pre; min-height: 29px;"></span>
-                                <input id="banner-input" maxlength="15" autocomplete="off"
-                                autocorrect="off" autocapitalize="off" class="css-ecqpj1 e1dqgp70" value="">
-                                <div class="css-banner-search">
-                                    <span role="img" color="#ffffff" rotate="0" class="css-search-icon" th:onclick="|location.href='@{/main/searchResult}'|">
-                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
-                                        focusable="false" preserveAspectRatio="xMidYMid meet" class="css-7kp13n e181xm9y0">
+<!-- 헤더 -->
+<main>
+    <div th:insert="/fix/header :: header" class="header"></div>
+    <div class="css-section1">
+        <!-- 메인 배너 -->
+        <div class="css-banner">
+            <div class="css-banner-section1">
+                <h1 class="css-banner-title">모르는 문제를 <br>친구들에게 물어보세요!</h1>
+                <!-- 배너 검색창 -->
+                <form action="" style="display: inline-flex; position: relative; width: 504px; height: 64px;">
+                    <div class="input-wrapper">
+                        <div class="css-input-category">
+                            <span class="category-text" style="white-space: pre; min-height: 29px;"></span>
+                            <input id="banner-input" maxlength="15" autocomplete="off"
+                                   autocorrect="off" autocapitalize="off" class="css-ecqpj1 e1dqgp70" value="">
+                            <div class="css-banner-search">
+                                    <span role="img" color="#ffffff" rotate="0" class="css-search-icon"
+                                          th:onclick="|location.href='@{/main/searchResult}'|">
+                                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"
+                                             aria-hidden="true"
+                                             focusable="false" preserveAspectRatio="xMidYMid meet"
+                                             class="css-7kp13n e181xm9y0">
                                             <path xmlns="http://www.w3.org/2000/svg"
-                                            d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z">
+                                                  d="M11.2307008,3.5 C15.5002489,3.5 18.9614015,6.96828437 18.9614015,11.24663 C18.9614015,13.0978372 18.3133954,14.7973826 17.2322825,16.1299241 L20.2742127,19.178378 C20.5762688,19.4810023 20.5764739,19.9714482 20.2746708,20.2738195 C19.9728678,20.5761908 19.4833433,20.5759857 19.1812873,20.2733614 L19.1812873,20.2733614 L16.1426973,17.2288066 C14.8071694,18.3312107 13.0960911,18.9932599 11.2307008,18.9932599 C6.96115262,18.9932599 3.5,15.5249756 3.5,11.24663 C3.5,6.96828437 6.96115262,3.5 11.2307008,3.5 Z M11.2307008,5.04932599 C7.81506225,5.04932599 5.04614015,7.82395349 5.04614015,11.24663 C5.04614015,14.6693064 7.81506225,17.4439339 11.2307008,17.4439339 C14.6463393,17.4439339 17.4152614,14.6693064 17.4152614,11.24663 C17.4152614,7.82395349 14.6463393,5.04932599 11.2307008,5.04932599 Z">
                                             </path>
                                         </svg>
                                     </span>
-                                </div>
                             </div>
-                        </div>
-                    </form>
-                    <div class="banner-hashtags">
-                        <div class="hashtag">
-                            <span>#미적분</span>
-                        </div>
-                        <div class="hashtag">
-                            <span>#독서와 문법</span>
-                        </div>
-                        <div class="hashtag">
-                            <span>#화학2</span>
                         </div>
                     </div>
-                </div>
-                <!-- 배너 슬라이드 -->
-                <div class="banner-slides">
-                    <div class="slides-list">
-                        <div class="outer"> <!-- section.container -->
-                            <div class="arrow-wrap-prev">
-                                <div class="arrow prev">&lt;</div>
-                            </div>
-                            <div class="inner-list"> <!-- div.banner -->
-                                <div class="inner" id="img1">
-                                    <img th:src="@{/img/main/slide1.jpg}" alt="">
-                                </div>
-                                <div class="inner" id="img2">
-                                    <img th:src="@{/img/main/slide2.jpg}" alt="">
-                                </div>
-                                <div class="inner" id="img3">
-                                    <img th:src="@{/img/main/slide3.jpg}" alt="">
-                                </div>
-                                <div class="inner" id="img4">
-                                    <img th:src="@{/img/main/slide4.jpg}" alt="">
-                                </div>
-                            </div>
-                            <div class="arrow-wrap-next">
-                                <div class="arrow next">&gt;</div>
-                            </div>
-                        </div>
+                </form>
+                <div class="banner-hashtags">
+                    <div class="hashtag">
+                        <span>#미적분</span>
+                    </div>
+                    <div class="hashtag">
+                        <span>#독서와 문법</span>
+                    </div>
+                    <div class="hashtag">
+                        <span>#화학2</span>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- 과목 카테고리 -->
-        <div class="css-section2">
-            <h1 class="css-section-title">일곱가지 과목중에서 골라봐!</h1>
-            <div class="css-section2-icons">
-                <!-- 카테고리별 아이콘 -->
-                <div class="categories">
-                    <a th:href="@{/board/korean}">
-                        <div class="category">
-                            <span>
-                                <img th:src="@{/img/main/category_icon_kr.png}" alt="">
-                            </span>
+            <!-- 배너 슬라이드 -->
+            <div class="banner-slides">
+                <div class="slides-list">
+                    <div class="outer"> <!-- section.container -->
+                        <div class="arrow-wrap-prev">
+                            <div class="arrow prev">&lt;</div>
                         </div>
-                    </a>
-                    <a th:href="@{/board/english}">
-                        <div class="category">
-                            <span>
-                                <img th:src="@{/img/main/category_icon_eng.png}" alt="">
-                            </span>
-                        </div>
-                    </a>
-                    <a th:href="@{/board/math}">
-                        <div class="category">
-                            <span>
-                                <img th:src="@{/img/main/category_icon_math.png}" alt="">
-                            </span>
-                        </div>
-                    </a>
-                    <a th:href="@{/board/science}">
-                        <div class="category">
-                            <span>
-                                <img th:src="@{/img/main/category_icon_si.png}" alt="">
-                            </span>
-                        </div>
-                    </a>
-                    <a th:href="@{/board/society}">
-                        <div class="category">
-                            <span>
-                                <img th:src="@{/img/main/category_icon_so.png}" alt="">
-                            </span>
-                        </div>
-                    </a>
-                    <a th:href="@{/board/history}">
-                        <div class="category">
-                            <span>
-                                <img th:src="@{/img/main/category_icon_his.png}" alt="">
-                            </span>
-                        </div>
-                    </a>
-                    <a th:href="@{/board/foreign}">
-                        <div class="category">
-                            <span>
-                                <img th:src="@{/img/main/category_icon_for.png}" alt="">
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- 회원가입 배너 -->
-        <div class="css-section">
-            <!-- url 달아야함 -->
-            <a th:href="@{/member/join}" class="css-0">
-                <div class="css-join-event">
-                    <span>
-                        <img th:src="@{/img/main/join_event_banner.png}" alt="">
-                    </span>
-                </div>
-            </a>
-        </div>
-        <!-- 랭킹 -->
-        <div class="ranking-section">
-            <h1 class="css-section-title">1위는 다 모아놨어!</h1>
-            <div class="rankings">
-                <div class="ranking-wrapper">
-                    <a th:href="@{/ranking/list}">
-                        <div class="user-ranking">
-                            <span>유저 랭킹</span>
-                        </div>
-                    </a>
-                    <div class="user-list-a">
-                        <div class="user-list-wrapper">
-                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                <img th:src="@{/img/main/medal.png}" alt="">
-                            </span>
-                            <div class="user-wrapper">
-                                <span class="userInfo-Id" id="rankingUserId1">
-                                    1위유저아이디
-                                </span>
-                                <span class="userInfo-Point" id="rankingUserPoint1">
-                                    누적 포인트 : 10000
-                                </span>
+                        <div class="inner-list"> <!-- div.banner -->
+                            <div class="inner" id="img1">
+                                <img th:src="@{/img/main/slide1.jpg}" alt="">
                             </div>
-                            <span>
-                                <div>
-                                    <img th:src="@{/img/main/ranking_icon01.png}" alt="">
-                                </div>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="user-list-b">
-                        <div class="user-list-wrapper">
-                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                <img th:src="@{/img/main/coin.png}" alt="">
-                            </span>
-                            <div class="user-wrapper">
-                                <span class="userInfo-Id" id="rankingUserId2">
-                                    2위유저아이디
-                                </span>
-                                <span class="userInfo-Point" id="rankingUserPoint2">
-                                    누적 포인트 : 10000
-                                </span>
+                            <div class="inner" id="img2">
+                                <img th:src="@{/img/main/slide2.jpg}" alt="">
                             </div>
-                            <span>
-                                <div>
-                                    <img th:src="@{/img/main/ranking_icon01.png}" alt="">
-                                </div>
-                            </span>
-                        </div>
-                        <div class="user-list-wrapper">
-                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                <img th:src="@{/img/main/coin.png}" alt="">
-                            </span>
-                            <div class="user-wrapper">
-                                <span class="userInfo-Id" id="rankingUserId3">
-                                    3위유저아이디
-                                </span>
-                                <span class="userInfo-Point" id="rankingUserPoint3">
-                                    누적 포인트 : 10000
-                                </span>
+                            <div class="inner" id="img3">
+                                <img th:src="@{/img/main/slide3.jpg}" alt="">
                             </div>
-                            <span>
-                                <div>
-                                    <img th:src="@{/img/main/ranking_icon01.png}" alt="">
-                                </div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="ranking-wrapper">
-                    <a th:href="@{/board/popular}">
-                        <div class="user-ranking">
-                            <span>인기 게시글</span>
-                        </div>
-                    </a>
-                    <div class="user-list-a">
-                        <div class="user-list-wrapper">
-                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                <img th:src="@{/img/main/medal.png}" alt="">
-                            </span>
-                            <div class="user-wrapper">
-                                <span class="userInfo-Id" id="rankingUserId">
-                                    1위유저아이디
-                                </span>
-                                <span class="userInfo-Point" id="rankingUserPoint">
-                                    누적 포인트 : 10000
-                                </span>
+                            <div class="inner" id="img4">
+                                <img th:src="@{/img/main/slide4.jpg}" alt="">
                             </div>
-                            <span>
-                                <div>
-                                    <img th:src="@{/img/main/ranking_icon01.png}" alt="">
-                                </div>
-                            </span>
                         </div>
-                    </div>
-                    <div class="user-list-b">
-                        <div class="user-list-wrapper">
-                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                <img th:src="@{/img/main/coin.png}" alt="">
-                            </span>
-                            <div class="user-wrapper">
-                                <span class="userInfo-Id" id="rankingUserId">
-                                    2위유저아이디
-                                </span>
-                                <span class="userInfo-Point" id="rankingUserPoint">
-                                    누적 포인트 : 10000
-                                </span>
-                            </div>
-                            <span>
-                                <div>
-                                    <img th:src="@{/img/main/ranking_icon01.png}" alt="">
-                                </div>
-                            </span>
+                        <div class="arrow-wrap-next">
+                            <div class="arrow next">&gt;</div>
                         </div>
-                        <div class="user-list-wrapper">
-                            <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
-                                <img th:src="@{/img/main/coin.png}" alt="">
-                            </span>
-                            <div class="user-wrapper">
-                                <span class="userInfo-Id" id="rankingUserId">
-                                    3위유저아이디
-                                </span>
-                                <span class="userInfo-Point" id="rankingUserPoint">
-                                    누적 포인트 : 10000
-                                </span>
-                            </div>
-                            <span>
-                                <div>
-                                    <img th:src="@{/img/main/ranking_icon01.png}" alt="">
-                                </div>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- 사이트 주석 -->
-        <div class="css-section3">
-            <div class="css-web-text">
-                <div class="css-section3-text-wrapper">
-                    <h1 class="css-section3-text1">
-                        내가 궁금한 과목, 문제<br>무엇이든 물어봐!
-                    </h1>
-                    <h2 class="css-section3-text2">
-                        누적 질문 30만개 이상!<br>
-                        여러분의 친구들이<br>
-                        여러분이 모르는게 무엇이든 답해드립니다!
-                    </h2>
-                </div>
-                <div class="css-ifame">
-                    <iframe width="692px" height="390px" src="https://www.youtube.com/embed/Dc8xzuog374?autoplay=0"
-                    title="YouTube video player" frameborder="0" style="border-radius: 12px;"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                    </iframe>
-                </div>
-            </div>
-            <div class="section4">
-                <div class="css-section3-text-wrapper">
-                    <div class="text-wrapper2">
-                        <h3 class="css-17mol43 e1o8iw1h2">빠른 커뮤니케이션</h3>
-                        <h4 style="font-weight: bold; color: #797979;">게시판에 글을 올려<br>
-                            자신있는 친구들에게<br>
-                            급한 문제들을 물어보세요!</h4>
-                    </div>
-                </div>
-                <div class="css-section3-text-wrapper">
-                    <div class="text-wrapper2">
-                        <h3 class="css-17mol43 e1o8iw1h2">안전한 결제</h3>
-                        <h4 style="font-weight: bold; color: #797979;">포인트, 혹시 부족하지는 않나요?<br>
-                            결제 시스템으로<br>
-                            포인트를 충전할 수 있어요!</h4>
-                    </div>
-                </div>
-                <div class="css-section3-text-wrapper">
-                    <div class="text-wrapper2">
-                        <h3 class="css-17mol43 e1o8iw1h2">만족스러운 답변들</h3>
-                        <h4 style="font-weight: bold; color: #797979;">현역들의 믿음직한 답변들!<br>
-                            여러분의 친구들이<br>
-                            만족스러운 답변들을 제공합니다.</h4>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </main>
-    <footer th:replace="/fix/footer.html::.footer"></footer>
+    <!-- 과목 카테고리 -->
+    <div class="css-section2">
+        <h1 class="css-section-title">일곱가지 과목중에서 골라봐!</h1>
+        <div class="css-section2-icons">
+            <!-- 카테고리별 아이콘 -->
+            <div class="categories">
+                <a th:href="@{/board/subject?category=Korean}">
+                    <div class="category">
+                            <span>
+                                <img th:src="@{/img/main/category_icon_kr.png}" alt="">
+                            </span>
+                    </div>
+                </a>
+                <a th:href="@{/board/subject?category=English}">
+                    <div class="category">
+                            <span>
+                                <img th:src="@{/img/main/category_icon_eng.png}" alt="">
+                            </span>
+                    </div>
+                </a>
+                <a th:href="@{/board/subject?category=Math}">
+                    <div class="category">
+                            <span>
+                                <img th:src="@{/img/main/category_icon_math.png}" alt="">
+                            </span>
+                    </div>
+                </a>
+                <a th:href="@{/board/subject?category=Science}">
+                    <div class="category">
+                            <span>
+                                <img th:src="@{/img/main/category_icon_si.png}" alt="">
+                            </span>
+                    </div>
+                </a>
+                <a th:href="@{/board/subject?category=Society}">
+                    <div class="category">
+                            <span>
+                                <img th:src="@{/img/main/category_icon_so.png}" alt="">
+                            </span>
+                    </div>
+                </a>
+                <a th:href="@{/board/subject?category=History}">
+                    <div class="category">
+                            <span>
+                                <img th:src="@{/img/main/category_icon_his.png}" alt="">
+                            </span>
+                    </div>
+                </a>
+                <a th:href="@{/board/subject?category=Foreign}">
+                    <div class="category">
+                            <span>
+                                <img th:src="@{/img/main/category_icon_for.png}" alt="">
+                            </span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- 회원가입 배너 -->
+    <div class="css-section">
+        <!-- url 달아야함 -->
+        <a th:href="@{/member/join}" class="css-0">
+            <div class="css-join-event">
+                    <span>
+                        <img th:src="@{/img/main/join_event_banner.png}" alt="">
+                    </span>
+            </div>
+        </a>
+    </div>
+    <!-- 랭킹 -->
+    <div class="ranking-section">
+        <h1 class="css-section-title" style="text-align: center !important;">1위는 다 모아놨어!</h1>
+        <div class="rankings">
+
+            <div class="ranking-wrapper">
+
+                <a th:href="@{/ranking/rankingList}">
+                    <div class="user-ranking">
+                        <span>유저 랭킹</span>
+                    </div>
+                </a>
+                <th:block th:each="point, i : ${points}">
+                    <div th:if="${i.count <= 3}" th:class="${i.count eq 1 ? 'user-list-a' : 'user-list-b' }">
+                        <div class="user-list-wrapper">
+                                <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                    <img th:if="${i.count eq 1}" th:src="@{/img/main/medal.png}" alt="">
+                                    <img th:unless="${i.count eq 1}" th:src="@{/img/main/coin.png}" alt="">
+                                    <!--                                    <img th:if="${i.count eq 3}" th:src="@{/img/main/coin.png}" alt="">-->
+                                </span>
+                            <div class="user-wrapper">
+                                    <span class="userInfo-Id" id="rankingUserId1" th:text="${point.memberNickname}">
+                                    </span>
+                                <span class="userInfo-Point" id="rankingUserPoint1"
+                                      th:text="'누적 포인트 : ' + ${point.totalPoint}">
+                                    </span>
+                            </div>
+                            <span>
+                                    <div>
+                                        <img th:src="@{/img/main/ranking_icon01.png}" alt="">
+                                    </div>
+                                </span>
+                        </div>
+                    </div>
+                </th:block>
+            </div>
+
+            <div class="ranking-wrapper">
+                <a th:href="@{/board/popular}">
+                    <div class="user-ranking">
+                        <span>인기 게시글</span>
+                    </div>
+                </a>
+                <th:block th:each="popular, i : ${populars}">
+                    <div th:if="${i.count <= 3}" th:class="${i.count eq 1 ? 'user-list-a' : 'user-list-b' }">
+                        <div class="user-list-wrapper">
+                                <span style="box-sizing: border-box; display: inline-block; overflow: hidden; width: 40px; height: 40px; background: none; opacity: 1; border: 0px; margin: 0px; padding: 0px; position: relative;">
+                                    <img th:if="${i.count eq 1}" th:src="@{/img/main/medal.png}" alt="">
+                                    <img th:unless="${i.count eq 1}" th:src="@{/img/main/coin.png}" alt="">
+                                    <!--                                    <img th:if="${i.count eq 3}" th:src="@{/img/main/coin.png}" alt="">-->
+                                </span>
+                            <div class="user-wrapper">
+                                <span class="userInfo-Id" id="rankingUserId2" th:text="${popular.memberNickname}">
+                                </span>
+                                <a th:href="@{/board/page?boardNumber=} + ${popular.boardNumber}">
+                                    <span th:text="${popular.boardTitle}"></span>
+                                </a>
+                                <span class="userInfo-Point" id="rankingBoardViewCount1"
+                                      th:text="'조회수 : ' + ${popular.boardViewcount}">
+                                </span>
+                            </div>
+                            <span>
+                                    <div>
+                                        <img th:src="@{/img/main/ranking_icon01.png}" alt="">
+                                    </div>
+                                </span>
+                        </div>
+                    </div>
+                </th:block>
+            </div>
+        </div>
+    </div>
+    <!-- 사이트 주석 -->
+    <div class="css-section3">
+        <div class="css-web-text">
+            <div class="css-section3-text-wrapper">
+                <h1 class="css-section3-text1">
+                    내가 궁금한 과목, 문제<br>무엇이든 물어봐!
+                </h1>
+                <h2 class="css-section3-text2">
+                    누적 질문 30만개 이상!<br>
+                    여러분의 친구들이<br>
+                    여러분이 모르는게 무엇이든 답해드립니다!
+                </h2>
+            </div>
+            <div class="css-ifame">
+                <iframe width="692px" height="390px" src="https://www.youtube.com/embed/Dc8xzuog374?autoplay=0"
+                        title="YouTube video player" frameborder="0" style="border-radius: 12px;"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+        <div class="section4">
+            <div class="css-section3-text-wrapper">
+                <div class="text-wrapper2">
+                    <h3 class="css-17mol43 e1o8iw1h2">빠른 커뮤니케이션</h3>
+                    <h4 style="font-weight: bold; color: #797979;">게시판에 글을 올려<br>
+                        자신있는 친구들에게<br>
+                        급한 문제들을 물어보세요!</h4>
+                </div>
+            </div>
+            <div class="css-section3-text-wrapper">
+                <div class="text-wrapper2">
+                    <h3 class="css-17mol43 e1o8iw1h2">안전한 결제</h3>
+                    <h4 style="font-weight: bold; color: #797979;">포인트, 혹시 부족하지는 않나요?<br>
+                        결제 시스템으로<br>
+                        포인트를 충전할 수 있어요!</h4>
+                </div>
+            </div>
+            <div class="css-section3-text-wrapper">
+                <div class="text-wrapper2">
+                    <h3 class="css-17mol43 e1o8iw1h2">만족스러운 답변들</h3>
+                    <h4 style="font-weight: bold; color: #797979;">현역들의 믿음직한 답변들!<br>
+                        여러분의 친구들이<br>
+                        만족스러운 답변들을 제공합니다.</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</main>
+<footer th:replace="/fix/footer.html::.footer"></footer>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" th:src="@{/js/main/main-banner-typingEffect.js}"></script>

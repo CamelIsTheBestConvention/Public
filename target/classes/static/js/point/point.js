@@ -12,18 +12,26 @@ $amount.children().on("click", function(){
     }
 });
 
-$option.children().on("click", function(){
-    if($amount.children().hasClass("selected") && $radio.is(":checked")){
+$amount.children().on("click", function(){
+    if($amount.children().hasClass("selected")){
         $charge.children().prop("disabled", false);//disabled 해제
     } else{
         $charge.children().prop("disabled", true);//disabled 적용
     }
 });
 
-$amount.children().on("click", function(){
-    if($amount.children().hasClass("selected") && $radio.is(":checked")){
-        $charge.children().prop("disabled", false);//disabled 해제
-    } else{
-        $charge.children().prop("disabled", true);//disabled 적용
-    }
-});
+// $option.children().on("click", function(){
+//     if($amount.children().hasClass("selected") && $radio.is(":checked")){
+//         $charge.children().prop("disabled", false);//disabled 해제
+//     } else{
+//         $charge.children().prop("disabled", true);//disabled 적용
+//     }
+// });
+
+// $amount.children().on("click", function(){
+//     if($amount.children().hasClass("selected") && $radio.is(":checked")){
+//         $charge.children().prop("disabled", false);//disabled 해제
+//     } else{
+//         $charge.children().prop("disabled", true);//disabled 적용
+//     }
+// });

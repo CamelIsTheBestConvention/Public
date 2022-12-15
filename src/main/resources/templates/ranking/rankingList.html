@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&family=Noto+Sans+KR&display=swap"
+            rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/css/fix/header.css}">
+    <link rel="stylesheet" th:href="@{/css/fix/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/point/rankingPage.css}">
+    <!--    <link rel="stylesheet" href="../css/lankingPage.css" />-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <title>랭킹 페이지</title>
+</head>
+<body>
+<!-- 헤더 -->
+<div th:insert="~{/fix/header :: header}"></div>
+
+<!-- 랭킹 페이지 -->
+<div class="wrapper">
+    <section class="ranking-section">
+        <!-- 랭킹 전체 -->
+        <div class="ranking-container">
+            <h1 class="title">TOP 카테고리 활동 랭킹</h1>
+            <h2 class="sub-title">
+                스프링드림에서 가장 많은 활동을 한 유저 랭킹입니다.
+            </h2>
+            <!-- 랭킹 목록 -->
+            <div class="ranking-wrapper">
+
+                <!-- 누적 포인트 -->
+                <div class="ranking-content">
+                    <div class="ranking-title">누적 포인트</div>
+                    <!-- 1등 유저 -->
+                    <th:block th:each="point, i : ${points}">
+                        <div th:class="${i.count eq 1 ? 'first-user' : 'top-user' }">
+                            <article th:class="${i.count eq 1 ? 'first-user-content' : 'after-user-content'}">
+
+                                <!-- 메달 -->
+                                <span>
+                                    <img th:if="${i.count eq 1}"
+                                         src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=320&q=75"
+                                         alt="1등">
+                                    <img th:if="${i.count eq 2}"
+                                         src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=320&q=75"
+                                         alt="2등"/>
+                                    <img th:if="${i.count eq 3}"
+                                         src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=320&q=75"
+                                         alt="3등"/>
+                                </span>
+
+                                <!-- 수치 -->
+                                <div class="user-info">
+                                    <p class="price" id="total-point-user1" th:text="${point.totalPoint + '점'}"></p>
+                                    <a href="#" class="user-name-a">
+                                        <span class="user-name" id="user-name-1"
+                                              th:text="${point.memberNickname}"></span>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </th:block>
+                </div>
+
+                <!-- 답변 수 -->
+                <div class="ranking-content">
+                    <div class="ranking-title">답변 수</div>
+                    <!-- 1등 유저 -->
+                    <th:block th:each="reply, i : ${replies}">
+                        <div th:class="${i.count eq 1 ? 'first-user' : 'top-user' }">
+                            <article th:class="${i.count eq 1 ? 'first-user-content' : 'after-user-content'}">
+
+                                <!-- 메달 -->
+                                <span>
+                                    <img th:if="${i.count eq 1}"
+                                         src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=320&q=75"
+                                         alt="1등">
+                                    <img th:if="${i.count eq 2}"
+                                         src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=320&q=75"
+                                         alt="2등"/>
+                                    <img th:if="${i.count eq 3}"
+                                         src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=320&q=75"
+                                         alt="3등"/>
+                                </span>
+                                <!-- 수치 -->
+                                <div class="user-info">
+                                    <p class="price" th:text="${reply.replies} + '개'"></p>
+                                    <a href="#" class="user-name-a">
+                                        <span class="user-name" th:text="${reply.memberNickname}"></span>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </th:block>
+                </div>
+
+
+                <!-- 채택 수 -->
+                <div class="ranking-content">
+
+                    <div class="ranking-title">채택 수</div>
+                    <!-- 1등 유저 -->
+                    <th:block th:each="adopt, i : ${adopts}">
+                        <div th:class="${i.count eq 1 ? 'first-user' : 'top-user' }">
+                            <article th:class="${i.count eq 1 ? 'first-user-content' : 'after-user-content'}">
+
+                                <!-- 메달 -->
+                                <span>
+                                    <img th:if="${i.count eq 1}"
+                                         src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-01%403x.png&w=320&q=75"
+                                         alt="1등">
+                                    <img th:if="${i.count eq 2}"
+                                         src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-02%403x.png&w=320&q=75"
+                                         alt="2등"/>
+                                    <img th:if="${i.count eq 3}"
+                                         src="https://kmong.com/_next/image?url=https%3A%2F%2Fd2v80xjmx68n4w.cloudfront.net%2Fassets%2Fdesktop%2Fpages%2Fmain%2Franking-03%403x.png&w=320&q=75"
+                                         alt="3등"/>
+                                </span>
+
+                                <!-- 수치 -->
+                                <div class="user-info">
+                                    <p class="price" th:text="${adopt.adopts} + '번'"></p>
+                                    <a href="#" class="user-name-a">
+                                        <span class="user-name" th:text="${adopt.memberNickname}"></span>
+                                    </a>
+                                </div>
+                            </article>
+                        </div>
+                    </th:block>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+<!-- 푸터 -->
+<div class="css-footer">
+    <div class="css-footer-info">
+        <p class="css-info-text">
+            웹개발 5조
+            <span class="css-info-bar"> | </span>
+            서울특별시 강남구 역삼동 736-7
+            <span class="css-info-bar"> | </span>
+            팀장 : 강민구
+            <span class="css-info-bar"> | </span>
+            사업자등록번호 : 613-81-65278
+            <span class="css-info-bar"> | </span><br/>
+            통신판매업신고 : 2018-서울서초-2134
+            <span class="css-info-bar"> | </span>
+            유료직업소개사업등록번호 : 제2021-3210195-14-5-00035호
+            <span class="css-info-bar"> | </span>
+            고객센터 : 1544-6254
+            <span class="css-info-bar"> | </span>
+            kmg2331@gmail.com
+        </p>
+    </div>
+</div>
+</body>
+<script src="../../static/js/fix/header.js"></script>
+</html>

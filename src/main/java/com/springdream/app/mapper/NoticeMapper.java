@@ -25,8 +25,4 @@ public interface NoticeMapper {
     //  전체 조회
     public List<NoticeDTO> selectAll();
 
-    //  최신글 조회
-    public List<NoticeDTO> selectAllOderByDate();
-
-
 }

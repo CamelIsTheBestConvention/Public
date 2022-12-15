@@ -69,7 +69,7 @@ a:hover, a:active, a:focus{
     text-decoration: none;
 }
 
-/* notice-recent.html*/
+/* recent.html*/
 .container-divider {
     border-top: 1px solid #FEEB83;
     margin-bottom: 20px;
@@ -278,7 +278,7 @@ a:hover, a:active, a:focus{
     padding: 20px 0;
 } */
 
-/* notice-all.html */
+/* main.html */
 
 .section-container{
     display: flex;

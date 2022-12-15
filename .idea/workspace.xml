@@ -1,25 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:public" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="adc448d4-621f-49ab-8dac-1e9fc96fca71" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdream/app/controller/NoticeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springdream/app/controller/NoticeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdream/app/domain/NoticeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springdream/app/domain/NoticeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdream/app/domain/NoticeVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springdream/app/domain/NoticeVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdream/app/mapper/NoticeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springdream/app/mapper/NoticeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdream/app/repository/NoticeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springdream/app/repository/NoticeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdream/app/service/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springdream/app/service/NoticeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/NoticeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/NoticeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/PointMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/PointMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fix/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fix/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/notice/notice-all.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/notice/notice-all.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/point/point-ranking.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/point/point-ranking.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/springdream/app/controller/NoticeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springdream/app/controller/NoticeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springdream/app/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springdream/app/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/boardMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/boardMain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/english.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/foreign.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/korean.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/math.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/popular.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/board/popular.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/recent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/science.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/society.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/board/top.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/springdream/app/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/springdream/app/controller/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/boardMain.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/board/boardMain.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/english.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/foreign.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/korean.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/math.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/new.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/board/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/popular.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/board/popular.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/recent.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/science.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/society.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/board/top.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +80,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
@@ -39,35 +89,45 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/board" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mirac\Desktop\Project\Work\src\main\resources\templates\board" />
+      <recent name="C:\Users\mirac\Desktop\Project\Work\src\main\resources\templates\point" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mirac\Desktop\Project\Work\src\main\resources\templates\ranking" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.AppApplication">
-    <configuration name="BoardMapperTest.selectByKeywordAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="NoticeControllerTest.noticeMainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.springdream.app.mapper.*" />
+          <option name="PATTERN" value="com.springdream.app.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.springdream.app.mapper" />
-      <option name="MAIN_CLASS_NAME" value="com.springdream.app.mapper.BoardMapperTest" />
-      <option name="METHOD_NAME" value="selectByKeywordAll" />
+      <option name="PACKAGE_NAME" value="com.springdream.app.controller" />
+      <option name="MAIN_CLASS_NAME" value="com.springdream.app.controller.NoticeControllerTest" />
+      <option name="METHOD_NAME" value="noticeMainTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="header.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/app/templates/fix/header.html" useBuiltInWebServerPort="true">
+    <configuration name="main.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/app/templates/notice/main.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="notice-all.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/app/templates/notice/notice-all.html" useBuiltInWebServerPort="true">
+    <configuration name="new.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/app/templates/board/new.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="notice-recent.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/app/templates/notice/notice-recent.html" useBuiltInWebServerPort="true">
+    <configuration name="page.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/app/templates/board/page.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="point-ranking.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/app/templates/point/point-ranking.html" useBuiltInWebServerPort="true">
+    <configuration name="recent.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/app/templates/notice/recent.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="AppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -79,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.notice-all.html" />
-        <item itemvalue="JavaScript Debug.notice-recent.html" />
-        <item itemvalue="JavaScript Debug.header.html" />
-        <item itemvalue="JavaScript Debug.point-ranking.html" />
-        <item itemvalue="JUnit.BoardMapperTest.selectByKeywordAll" />
+        <item itemvalue="JavaScript Debug.new.html" />
+        <item itemvalue="JavaScript Debug.page.html" />
+        <item itemvalue="JavaScript Debug.recent.html (1)" />
+        <item itemvalue="JavaScript Debug.main.html" />
+        <item itemvalue="JUnit.NoticeControllerTest.noticeMainTest" />
       </list>
     </recent_temporary>
   </component>
@@ -103,53 +163,117 @@
       <workItem from="1670251389885" duration="14555000" />
       <workItem from="1670270490301" duration="177000" />
       <workItem from="1670270707774" duration="948000" />
-      <workItem from="1670304590737" duration="5004000" />
+      <workItem from="1670304590737" duration="5682000" />
+      <workItem from="1670325634084" duration="25716000" />
+      <workItem from="1670391950910" duration="4407000" />
+      <workItem from="1670891274934" duration="15000" />
+      <workItem from="1670891367684" duration="36000" />
+      <workItem from="1670891419447" duration="612000" />
+      <workItem from="1670906272283" duration="6000" />
+      <workItem from="1671060078191" duration="281000" />
+      <workItem from="1671060375855" duration="13000" />
+      <workItem from="1671060417781" duration="14897000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="425" key="GridCell.Tab.0.bottom" timestamp="1670307875727">
+    <state x="690" y="271" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog" timestamp="1670344572235">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.0.bottom/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670307875727" />
+    <state x="690" y="271" key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670344572235" />
+    <state x="742" y="383" width="435" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1670343929811">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="742" y="383" width="435" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670343929811" />
+    <state x="373" y="102" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1670344232289">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="373" y="102" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670344232289" />
+    <state x="690" y="262" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1670332762019">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state x="690" y="262" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670332762019" />
+    <state width="1877" height="138" key="GridCell.Tab.0.bottom" timestamp="1671082803825">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="252" key="GridCell.Tab.0.bottom/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670449150485" />
+    <state width="1877" height="138" key="GridCell.Tab.0.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1671082803825" />
     <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1670271347147" />
-    <state width="1877" height="425" key="GridCell.Tab.0.center" timestamp="1670307875727">
+    <state width="1877" height="138" key="GridCell.Tab.0.center" timestamp="1671082803825">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.0.center/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670307875727" />
+    <state width="1877" height="252" key="GridCell.Tab.0.center/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670449150485" />
+    <state width="1877" height="138" key="GridCell.Tab.0.center/0.0.1920.1032@0.0.1920.1032" timestamp="1671082803825" />
     <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1670271347147" />
-    <state width="1877" height="425" key="GridCell.Tab.0.left" timestamp="1670307875727">
+    <state width="1877" height="138" key="GridCell.Tab.0.left" timestamp="1671082803825">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.0.left/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670307875727" />
+    <state width="1877" height="252" key="GridCell.Tab.0.left/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670449150485" />
+    <state width="1877" height="138" key="GridCell.Tab.0.left/0.0.1920.1032@0.0.1920.1032" timestamp="1671082803825" />
     <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1670271347147" />
-    <state width="1877" height="425" key="GridCell.Tab.0.right" timestamp="1670307875727">
+    <state width="1877" height="138" key="GridCell.Tab.0.right" timestamp="1671082803825">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.0.right/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670307875727" />
+    <state width="1877" height="252" key="GridCell.Tab.0.right/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670449150485" />
+    <state width="1877" height="138" key="GridCell.Tab.0.right/0.0.1920.1032@0.0.1920.1032" timestamp="1671082803825" />
     <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1670271347147" />
-    <state width="1877" height="425" key="GridCell.Tab.1.bottom" timestamp="1670307875727">
+    <state width="1877" height="138" key="GridCell.Tab.1.bottom" timestamp="1671082803825">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.1.bottom/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670307875727" />
+    <state width="1877" height="252" key="GridCell.Tab.1.bottom/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670449150485" />
+    <state width="1877" height="138" key="GridCell.Tab.1.bottom/0.0.1920.1032@0.0.1920.1032" timestamp="1671082803825" />
     <state width="1877" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1670271347147" />
-    <state width="1877" height="425" key="GridCell.Tab.1.center" timestamp="1670307875727">
+    <state width="1877" height="138" key="GridCell.Tab.1.center" timestamp="1671082803825">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.1.center/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670307875727" />
+    <state width="1877" height="252" key="GridCell.Tab.1.center/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670449150485" />
+    <state width="1877" height="138" key="GridCell.Tab.1.center/0.0.1920.1032@0.0.1920.1032" timestamp="1671082803825" />
     <state width="1877" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1670271347147" />
-    <state width="1877" height="425" key="GridCell.Tab.1.left" timestamp="1670307875727">
+    <state width="1877" height="138" key="GridCell.Tab.1.left" timestamp="1671082803825">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.1.left/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670307875727" />
+    <state width="1877" height="252" key="GridCell.Tab.1.left/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670449150485" />
+    <state width="1877" height="138" key="GridCell.Tab.1.left/0.0.1920.1032@0.0.1920.1032" timestamp="1671082803825" />
     <state width="1877" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1670271347147" />
-    <state width="1877" height="425" key="GridCell.Tab.1.right" timestamp="1670307875727">
+    <state width="1877" height="138" key="GridCell.Tab.1.right" timestamp="1671082803825">
       <screen x="0" y="0" width="1920" height="1032" />
     </state>
-    <state width="1877" height="425" key="GridCell.Tab.1.right/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670307875727" />
+    <state width="1877" height="252" key="GridCell.Tab.1.right/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670449150485" />
+    <state width="1877" height="138" key="GridCell.Tab.1.right/0.0.1920.1032@0.0.1920.1032" timestamp="1671082803825" />
     <state width="1877" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1670271347147" />
+    <state width="1877" height="344" key="GridCell.Tab.2.bottom" timestamp="1670352819743">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="344" key="GridCell.Tab.2.bottom/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670352819743" />
+    <state width="1877" height="344" key="GridCell.Tab.2.center" timestamp="1670352819742">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="344" key="GridCell.Tab.2.center/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670352819742" />
+    <state width="1877" height="344" key="GridCell.Tab.2.left" timestamp="1670352819742">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="344" key="GridCell.Tab.2.left/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670352819742" />
+    <state width="1877" height="344" key="GridCell.Tab.2.right" timestamp="1670352819742">
+      <screen x="0" y="0" width="1920" height="1032" />
+    </state>
+    <state width="1877" height="344" key="GridCell.Tab.2.right/-1920.-8.1536.826/0.0.1920.1032@0.0.1920.1032" timestamp="1670352819742" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/app$AppApplication.ic" NAME="AppApplication Coverage Results" MODIFIED="1670328870679" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

@@ -26,50 +26,10 @@
     <!-- 메인 -->
     <main>
         <!-- 배너 -->
-        <section class="main-banner">
-            <div class="banner">
-                <h1 class="banner-text"> 내가 모르는 것을
-                    <br>
-                    <span>질문해보세요!</span>
-                </h1>
-                <div>
-                    <span class="banner-img">
-                        <img th:src="@{/img/board/file_icon.png}" alt="">
-                    </span>
-                </div>
-            </div>
-        </section>
+        <section th:insert="~{/board/boardBanner :: banner}"></section>
         <section class="main-body">
             <!-- 카테고리 -->
-            <div class="main-category">
-                <div class="category-list">
-                    <button type="button" class="recent">최신글</button>
-                </div>
-                <div class="category-list selected">
-                    <button type="button" class="interest">인기글</button>
-                </div>
-                <div class="category-list">
-                    <button type="button" class="korean" value="국어">국어</button>
-                </div>
-                <div class="category-list">
-                    <button type="button" class="math" value="수학">수학</button>
-                </div>
-                <div class="category-list">
-                    <button type="button" class="english" value="영어">영어</button>
-                </div>
-                <div class="category-list">
-                    <button type="button" class="society" value="사탐">사탐</button>
-                </div>
-                <div class="category-list">
-                    <button type="button" class="science" value="과탐">과탐</button>
-                </div>
-                <div class="category-list">
-                    <button type="button" class="history" value="한국사">한국사</button>
-                </div>
-                <div class="category-list">
-                    <button type="button" class="foreign" value="제2외국어">제2외국어</button>
-                </div>
-            </div>
+            <div th:insert="~{/board/boardBanner.html :: categoryList}"></div>
             <!-- 메인 헤더 -->
             <div class="main-header">
                 <div class="main-header-content">
@@ -79,7 +39,7 @@
 
             <!-- 글 리스트 -->
             <section class="article-list" >
-                <th:block th:each="popular:${popular}">
+                <th:block th:each="popular:${populars}">
                     <!-- 글 -->
                     <article class="article" th:object="${popular}">
                         <!-- 이미지 -->
@@ -186,54 +146,6 @@
     //         dataType: "json"
     //     });
     // });
-
-    // 인기글
-    $("button.interest").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/popular";
-    });
-
-    // 최신글
-    $("button.recent").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/recent";
-    });
-
-    // 국어
-    $("button.korean").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/korean";
-    });
-    // 수학
-    $("button.math").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/math";
-    });
-    // 영어
-    $("button.english").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/english";
-    });
-    // 사탐
-    $("button.society").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/society";
-    });
-    // 과탐
-    $("button.science").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/science";
-    });
-    // 한국사
-    $("button.history").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/history";
-    });
-    // 제2외국어
-    $("button.foreign").on("click", function(e){
-        e.preventDefault();
-        location.href = "/board/foreign";
-    });
 
 </script>
 </html>

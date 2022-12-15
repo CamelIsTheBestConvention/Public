@@ -5,18 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>공지사항</title>
-    <link rel="stylesheet" type="text/css" href="../../static/css/fix/header.css">
-    <link rel="stylesheet" type="text/css" href="../../static/css/fix/footer.css">
-    <link rel="stylesheet" type="text/css" href="../../static/css/notice/notice.css">
+    <link rel="stylesheet" th:href="@{/css/fix/header.css}">
+    <link rel="stylesheet" th:href="@{/css/fix/footer.css}">
+    <link rel="stylesheet" th:href="@{/css/notice/notice.css}">
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
 
 </head>
 <body>
     <!--  헤더  -->
     <div th:insert="~{fix/header :: header}"></div>
+
     <!-- 헤더와 바디 사이 공간 -->
     <div class="container-divider"></div>
 
@@ -27,7 +27,7 @@
                     <a href="">공지사항</a>
                 </li>
                 <li title="전체 공지">
-                    <a href="">전체 공지</a>
+                    <a th:href="@{/notice/main}">전체 공지</a>
                 </li>
             </ol>
         </nav>
@@ -38,11 +38,15 @@
                         <div class="page-title">전체공지</div>
                     </h1>
                 </header>
-                <th:block th:each="notice: {notices}">
-                <ul class="article-list" th:object="notice">
-                    <li class="article-list-item">
-                        <a href="" class="article-list-link" th:text="noticeTitle">개인정보처리방침 개정 안내 (2021.11.19)</a>
-                    </li>
+
+                    <ul class="article-list">
+                        <th:block th:each="notice: ${notices}">
+                            <li class="article-list-item">
+                                <a th:href="@{/notice/recent(noticeNumber=${notice.noticeNumber})}" class="article-list-link" th:text="${notice.noticeTitle}"></a>
+                            </li>
+                        </th:block>
+                    </ul>
+<!--                개인정보처리방침 개정 안내 (2021.11.19)-->
 <!--                    <li class="article-list-item">-->
 <!--                        <a href="" class="article-list-link">개인정보처리방침 개정 안내 (2021.10.29)</a>-->
 <!--                    </li>-->
@@ -82,7 +86,6 @@
 <!--                    <li class="article-list-item">-->
 <!--                        <a href="" class="article-list-link">크몽을 통하지 않은 직접 결제에 대한 조치가 강화됩니다.</a>-->
 <!--                    </li>-->
-                </ul>
             </section>
         </div>
     </div>

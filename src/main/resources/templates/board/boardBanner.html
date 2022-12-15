@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="/css/fix/header.css">
+    <link rel="stylesheet" type="text/css" href="/css/fix/footer.css">
+    <link rel="stylesheet" type='text/css' th:href="@{/css/board/boardMain.css}">
+</head>
+<body>
+<section th:fragment="banner" class="main-banner">
+    <div class="banner">
+        <h1 class="banner-text"> 내가 모르는 것을
+            <br>
+            <span>질문해보세요!</span>
+        </h1>
+        <div>
+            <span class="banner-img">
+                <img th:src="@{/img/board/file_icon.png}" alt="">
+            </span>
+        </div>
+    </div>
+</section>
+
+<!-- 카테고리 -->
+<div th:fragment="categoryList" class="main-category">
+    <div class="category-list">
+        <button type="button" class="recent">
+            <a th:href="@{/board/boardMain}">최신글</a>
+        </button>
+    </div>
+    <div class="category-list">
+        <button type="button" class="interest">
+            <a th:href="@{/board/popular}">인기글</a>
+        </button>
+    </div>
+    <div class="category-list">
+        <button type="button" class="korean" value="국어">
+            <a th:href="@{/board/subject?category=Korean}">국어</a>
+        </button>
+    </div>
+    <div class="category-list">
+        <button type="button" class="math" value="수학">
+            <a th:href="@{/board/subject?category=Math}">수학</a>
+        </button>
+    </div>
+    <div class="category-list">
+        <button type="button" class="english" value="영어">
+            <a th:href="@{/board/subject?category=English}">영어</a>
+        </button>
+    </div>
+    <div class="category-list">
+        <button type="button" class="society" value="사탐">
+            <a th:href="@{/board/subject?category=Society}">사탐</a>
+        </button>
+    </div>
+    <div class="category-list">
+        <button type="button" class="science" value="과탐">
+            <a th:href="@{/board/subject?category=Science}">과탐</a>
+        </button>
+    </div>
+    <div class="category-list">
+        <button type="button" class="history" value="한국사">
+            <a th:href="@{/board/subject?category=History}">한국사</a>
+        </button>
+    </div>
+    <div class="category-list">
+        <button type="button" class="foreign" value="제2외국어">
+            <a th:href="@{/board/subject?category=Foreign}">제2외국어</a>
+        </button>
+    </div>
+</div>
+</body>
+</html>

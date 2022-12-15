@@ -16,16 +16,16 @@ public class NoticeController {
     private final NoticeService noticeService;
 
 
-    @GetMapping("/mainList")
+    @GetMapping("/main")
     public void noticeMain(Model model) {
         model.addAttribute("notices", noticeService.showAll());
     }
 
     //
-    @GetMapping("/pageList")
-    public String noticeRecent(Long boardNumber, Model model){
+    @GetMapping("/recent")
+    public String noticeRecent(Long noticeNumber, Model model){
         model.addAttribute("notices", noticeService.showAll());
-        model.addAttribute("notice", noticeService.show(boardNumber));
-        return "/notice/notice-recent";
+        model.addAttribute("notice", noticeService.show(noticeNumber));
+        return "/notice/recent";
     }
 }

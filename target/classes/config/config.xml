@@ -14,5 +14,7 @@
         <typeAlias type="com.springdream.app.domain.ReportVO" alias="reportVO"/>
         <typeAlias type="com.springdream.app.domain.NoticeVO" alias="noticeVO"/>
         <typeAlias type="com.springdream.app.domain.NoticeDTO" alias="noticeDTO"/>
+        <typeAlias type="com.springdream.app.domain.RankingVO" alias="rankingVO"/>
+        <typeAlias type="com.springdream.app.domain.RankingDTO" alias="rankingDTO"/>
     </typeAliases>
 </configuration>
